@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+<!-- Html e a tag raiz ou seja identificar o conteudo html -->
+
+<!-- <!DOCTYPE html>  informa ao navegardo que o conteudo e html -->
+
+<!-- lang="en"  definie a linguagem da pagina -->
+
+
+<!-- Head  serve para por as tags e configurações da pagina-->
+
+<!--  <meta charset="UTF-8"> serve para garantir que os caracteres estejam corretos -->
+
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    propriedade para ajustar na tela de dispositivo
+-->
+
+<!-- <title>Document</title>  serve para vc por o titulo da pagina -->
+
+<!-- Existem varias metags para head -->
+
+<!-- Body serve para por o conteudo da pagina -->

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- o Interno ficar dentro head -->
+    <!-- essa forma tbm não deve ser utilizada pois vc não consegue reaproveitar o css -->
+    <style>
+
+        #interno{
+            color: blue;
+        }
+    </style>
+
+    <!-- Externo vc linka o css de outra pagina css -->
+    <!-- Esse recomendando pois facilitar a manutenção e reaproveitamento de codigo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Existem 3 forma -->
+
+    <!-- inline -->
+    <!-- Essa forma não deve ser  usada pois dificulta manutençção do codigo  -->
+
+    <p style="color: red;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio recusandae distinctio, laborum, qui, voluptate quo quibusdam doloremque ex animi temporibus deleniti modi impedit tempora fuga accusantium fugit nulla assumenda sunt.</p>
+
+    <!-- interno -->
+    <p id="interno">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio recusandae distinctio, laborum, qui, voluptate quo quibusdam doloremque ex animi temporibus deleniti modi impedit tempora fuga accusantium fugit nulla assumenda sunt.</p>
+
+    <!-- Externo -->
+    <p id="externo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio recusandae distinctio, laborum, qui, voluptate quo quibusdam doloremque ex animi temporibus deleniti modi impedit tempora fuga accusantium fugit nulla assumenda sunt.</p>
+</body>
+</html>
