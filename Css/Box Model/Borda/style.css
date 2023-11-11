@@ -1,0 +1,46 @@
+
+img{
+    width: 50%;
+    margin: 200px auto;
+    display: block;
+}
+
+
+/* Propriedade para definir a borda */
+
+/* se não for definida sera definido pelo conteudo ai ele ficar automatico */
+
+
+div, .box{
+     /* Apenas para melhorar visualização */
+    background-color: black;
+    color: red;
+
+}
+.box{
+    /* definindo largura e altura */
+    width: 300px;
+    height: 300px; 
+
+    
+
+    
+}
+
+
+.box2{
+
+    padding: 20px 30px;
+    margin: 0 30px;
+    border: 10px solid blue;
+
+    /* para arrendondar a borda */
+
+    border-radius: 5px;
+}
+
+/* Essa ver~sao shorhand */
+
+/* Existe tbm uma propriedade  chamanda outline */
+/* E uma propriedad emuito parecida  com border */
+/* a diferença basica e que  o border e pra dentro e ele e para fora qualquer  veja explicação mdn */
