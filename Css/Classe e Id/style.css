@@ -1,0 +1,18 @@
+/* Para utilizar a classe basta por .nomeClasse */
+
+body{
+    background-color: black;
+}
+.paragrafo{
+    color: blanchedalmond;
+}
+
+/* para utilizar o id basta  #nomeId */
+
+#titulo{
+
+    color: aqua;
+    
+}
+
+/* caso tenha uma classe e um id na mesma tag o id vai prevalecer */
