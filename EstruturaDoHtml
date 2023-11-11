@@ -6,16 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>OI</h1>
 </body>
 </html>
 
 
 <!-- Html e a tag raiz ou seja identificar o conteudo html -->
 
-<!-- <!DOCTYPE html>  informa ao navegardo que o conteudo e html -->
+<!-- <!DOCTYPE html>  informa ao navegador que o conteudo e html -->
 
-<!-- lang="en"  definie a linguagem da pagina -->
+<!-- lang="en"  define o idioma da pagina -->
 
 
 <!-- Head  serve para por as tags e configurações da pagina-->
