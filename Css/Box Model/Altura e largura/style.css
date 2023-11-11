@@ -1,0 +1,35 @@
+
+img{
+    width: 50%;
+    margin: 200px auto;
+    display: block;
+}
+
+
+/* Propriedade para definir largura width */
+/* Propriedade para definir altura */
+
+/* se não for definida sera definido pelo conteudo ai ele ficar automatico */
+
+div, .box{
+     /* Apenas para melhorar visualização */
+    background-color: black;
+    color: red;
+
+}
+.box{
+    /* definindo largura e altura */
+    width: 300px;
+    height: 300px; 
+
+    margin: 20px 0px;
+
+    /* Apenas para melhorar visualização */
+    background-color: black;
+    color: red;
+
+}
+
+/* Embora vc possa utilizar em % height não recomendado utilizar nele pois ele nem sempre funcionara como deseja por tanto e melhor utilizar apenas no width e deixa ou outro a depender em qualquer outra propriedade seja auto ou px */
+
+/* Lembrando que em % ele se basea no tamanho do elemento Pai e não da tela */
