@@ -1,0 +1,31 @@
+
+div{
+
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+}
+
+.centralizada{
+
+    background-color: red;
+    margin: 0 auto;
+}
+
+/* Quando Utilizamos algo Com display block seja pq vc pos block ou ele e por padrão como por exemplo a div que estamos utilizando */
+
+/* resumindo:
+
+    Para vc  conseguir centralizar com margin vc precisa
+
+    Que o conteudo ou container seja display block
+    tenha largura fixa
+
+    ai vc pode utilizar margin: 0 auto;
+
+    0 seria referente a margin de cima e embaixo ai fica opcional o valor
+
+    ja o segundo vc deixa automatico que ele ira calcular automaticamente o valor e por sempre centralizado
+    caso não seja auto ele não ira centralizar
+
+*/
