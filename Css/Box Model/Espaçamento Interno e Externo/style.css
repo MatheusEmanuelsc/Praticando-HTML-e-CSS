@@ -1,0 +1,35 @@
+
+img{
+    width: 50%;
+    margin: 200px auto;
+    display: block;
+}
+
+
+/* Propriedade para definir espaçamento Interno padding */
+/* Propriedade para definir espaçamento externo margin */
+
+/* se não for definida sera definido pelo conteudo ai ele ficar automatico */
+
+div, .box{
+     /* Apenas para melhorar visualização */
+    background-color: black;
+    color: red;
+
+}
+.box{
+    /* definindo largura e altura */
+    width: 300px;
+    height: 300px; 
+
+    
+
+    
+}
+
+
+.box2{
+
+    padding: 20px 30px;
+    margin: 0 30px;
+}
