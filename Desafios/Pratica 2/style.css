@@ -1,0 +1,31 @@
+body{
+
+    width: 1000px;
+    margin: 30px auto;
+    background-color: lightgray;
+}
+
+header{
+    text-align: center;
+}
+h1{
+    background-color: lightskyblue;
+    
+    
+}
+
+h1, h2{
+    color: blue;
+}
+
+
+h2{
+    background-color: gray;
+    border-bottom: darkblue solid 3px;
+    padding: 20px 10px;
+}
+
+strong{
+
+    color: blue;
+}
