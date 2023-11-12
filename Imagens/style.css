@@ -1,0 +1,28 @@
+.img-logo{
+    width: 400px;
+}
+
+/* Oberve a queda de qualidade na img  bitmap */
+/* para uma vetorial */
+
+
+body{
+    
+    width: 700px;
+    font-size: 22px;
+    font-family: sans-serif;
+    margin: auto;
+    background: url(img/bg.jpg) no-repeat;
+    /* Para por img de backgroud */
+    /* existem outra configurações como por exemplo no-repeat */
+    
+}
+
+.img-html{
+    float: left;
+}
+
+.img-css{
+    float: right;
+}
+
