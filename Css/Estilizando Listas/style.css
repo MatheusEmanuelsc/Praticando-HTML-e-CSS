@@ -1,0 +1,33 @@
+/* styles.css */
+
+/* Estilo padrão para listas não ordenadas */
+ul {
+    list-style-type: disc; /* Marcadores como círculos */
+    margin: 20px 0;
+}
+
+  /* Estilo personalizado para uma lista com classe */
+.custom-list {
+    list-style-type: square; /* Marcadores como quadrados */
+    color: #3498db; /* Cor do texto */
+    font-family: 'Arial', sans-serif; /* Fonte do texto */
+    padding-left: 20px; /* Espaçamento à esquerda para alinhar com os marcadores */
+}
+
+
+/* Resumo:
+list-style-type:
+
+Define o tipo de marcador na lista (disc, circle, square, etc.).
+list-style-position:
+
+Define a posição do marcador em relação ao texto (inside ou outside).
+list-style-image:
+
+Permite o uso de uma imagem personalizada como marcador.
+Exemplo:
+
+No exemplo acima, a lista padrão usa marcadores circulares, enquanto a lista com a classe custom-list usa marcadores quadrados, uma cor de texto diferente e um espaçamento personalizado.
+A propriedade list-style é útil para personalizar a aparência de listas em uma página web, fornecendo controle sobre o estilo, posição e imagem dos marcadores. */
+
+/* Existe tbm list-style no qual vc pode por none assim tirando os efeitos de lista */
