@@ -1,0 +1,51 @@
+div{
+
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+
+    padding: 20px;
+    margin: 20px;
+    border: red solid 3px;
+}
+
+.box{
+
+    background-color: red;
+    border: blue solid 3px;
+    box-sizing: border-box;
+    
+}
+
+/*para definir o valor chame propriedade -> box-sizing */
+/* Deois so adc o valor */
+
+/* 
+   A propriedade `box-sizing` em CSS controla como as dimensões de um elemento são calculadas,
+   incluindo ou excluindo as áreas de preenchimento (padding) e borda do elemento.
+
+   - `content-box` (valor padrão): As dimensões do elemento incluem apenas o conteúdo,
+     excluindo preenchimento e borda. Qualquer largura ou altura especificada afeta apenas o conteúdo interno.
+
+   - `border-box`: As dimensões do elemento incluem o conteúdo, preenchimento e borda. 
+     Qualquer largura ou altura especificada afeta a caixa total do elemento.
+
+   É útil usar `border-box` quando você deseja que as dimensões especificadas afetem a caixa total,
+   facilitando o controle sobre o layout sem se preocupar com preenchimentos e bordas adicionais.
+
+   Exemplo:
+   div {
+    box-sizing: border-box;
+    width: 100%;  A largura agora incluirá preenchimento e borda. 
+    padding: 10px;
+    border: 2px solid #333;
+   }
+*/
+
+
+/* Resumindo 
+
+A propriedade padrão content-box : soma  bordas + conteudo e padding
+A propridade border-box ajusta os valores para manter o tamnho desejado como vimos no exemplo
+
+*/
