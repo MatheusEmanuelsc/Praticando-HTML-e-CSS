@@ -1,0 +1,42 @@
+/* styles.css */
+
+/* Estilo padrão para links */
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+  /* Pseudo-classe para link hover */
+a:hover {
+    text-decoration: underline;
+}
+
+  /* Pseudo-classe para link visitado */
+a:visited {
+    color: #8e44ad;
+}
+
+  /* Pseudo-classe para link ativo (quando pressionado) */
+a:active {
+    color: #e74c3c;
+}
+
+  /* Estilo adicional para links normais */
+.normal-link {
+    font-weight: bold;
+}
+
+  /* Estilo adicional para links com hover */
+.hover-link:hover {
+    background-color: #ecf0f1;
+}
+
+  /* Estilo adicional para links visitados */
+.visited-link:visited {
+    font-style: italic;
+}
+
+  /* Estilo adicional para links ativos */
+.active-link:active {
+    transform: scale(1.1);
+}
