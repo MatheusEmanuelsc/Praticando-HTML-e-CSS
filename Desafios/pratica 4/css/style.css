@@ -1,0 +1,113 @@
+body{
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #ccc;
+}
+.hero{
+    background: url(../img/bg-3.jpg) ;
+    background-position: right center;
+    background-size: cover;
+    height: 500px;
+    padding-top: 1px;
+}
+
+.hero-content{
+    
+    width: 80%;
+    margin: 50px auto 0 ;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1{
+
+    font-size: 56px;
+    text-shadow: 2px 2px 2px black;
+    margin-bottom: 0;
+    
+
+}
+
+.hero-content h1, h2, .hero a{
+    text-transform: uppercase;
+}
+
+.hero-content p{
+
+    background-color: rgba(0, 0, 0, .7);
+    display: inline-block;
+    padding: 10px;
+    font-size: 18px;
+    border-bottom: white 2px solid;
+}
+
+.hero nav ul{
+
+    margin: 20px 50px 0 0;
+    text-align: right;
+}
+
+.hero nav li{
+
+    display: inline-block;
+    list-style: none;
+    border: 1px solid white;
+    margin-left: 20px;
+    
+}
+
+.hero a{
+
+    text-decoration: none;
+    padding:10px 20px ;
+    background-color: rgba(0, 0, 0, .3);
+    display: block;
+    letter-spacing: 2px;
+    
+}
+
+.hero a:hover{
+
+    background-color: rgba(0, 0, 0, .5);
+}
+
+section{
+
+    width: 80%;
+    margin: 0 auto;
+    max-width: 860px;
+    padding-top: 32px;
+}
+
+article{
+
+    background-color: white;
+    padding: 16px;
+    margin-bottom: 32px;
+}
+
+article h2{
+
+    background-color:#eee ;
+    border-bottom: 2px solid #ccc;
+    padding: 10px;
+    margin-top: 0;
+}
+
+article a{
+
+    background-color: #cdc7c3;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 6px;
+    
+}
+
+footer{
+    color: white;
+    background-color: #6b6c68;
+    text-align: center;
+    padding: 30px;
+    text-shadow: 2px 2px 2px black;
+    letter-spacing: 3px;
+}
