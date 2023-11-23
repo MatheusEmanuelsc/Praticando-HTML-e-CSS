@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    height: 400px;
+}
+
+/* Estilo básico para todas as caixas */
+div {
+    width: 150px;
+    height: 100px;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 100px;
+    margin-bottom: 10px;
+}
+
+/* Caixa com position: static (valor padrão) */
+.static-box {
+    position: static;
+}
+
+/* Caixa com position: relative, deslocada 20px para baixo e 20px para a direita */
+.relative-box {
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+/* Caixa com position: absolute, posicionada em relação ao contêiner .container */
+.absolute-box {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+}
+
+/* Caixa com position: fixed, fixa na parte superior direita da janela de visualização */
+.fixed-box {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+/* Caixa com position: sticky, fixa na parte superior quando atinge o topo do contêiner .container */
+.sticky-box {
+    position: sticky;
+    top: 0;
+    background-color: lightcoral;
+}
