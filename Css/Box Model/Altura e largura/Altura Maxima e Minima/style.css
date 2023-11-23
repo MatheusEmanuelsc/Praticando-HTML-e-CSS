@@ -1,0 +1,32 @@
+
+.container{
+
+    border: 2px solid red;
+    padding: 16px;
+    width: 300px;
+    margin-bottom: 16px;
+}
+
+
+.item{
+
+    background-color: blueviolet;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.fit-content{
+    width: fit-content;
+    /* ao adc fit-content ele mantem o elemento em bloco porem ocupa apenas o espaço do conteudo */
+}
+
+.min-content{
+    width: min-content;
+    /* ao adc min-content ele vai pegar a maior palavra do conteudo
+    e definir como largura do conteudo */
+}
+
+.max-content{
+    width: max-content;
+    /* Ele vai trazer a maior largura possivel a depender do conteudo */
+}
