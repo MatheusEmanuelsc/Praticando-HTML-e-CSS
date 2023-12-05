@@ -1,0 +1,16 @@
+
+div{
+    background-color: orange;
+    width: 200px;
+    height: 200px;
+    margin: 100px auto;
+
+    /* forma que arrendonda todos os lados de forma diferentes*/
+    border-radius: 50px  30px 40px 20px;
+
+    /* forma elipse */
+    
+    border-radius: 50px / 20px;
+
+
+}
