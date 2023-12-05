@@ -17,6 +17,8 @@ Ja para pequanso padding ou marge ate box shadow vc pode usar tranquilo
     /* Em e uma unidade que se adpatar ajuste do usario como por exmeplo o tamanho do texto
     
     ela relativo ao tamanho  fonte do elemento pai
+
+    se utilizar o em em outra propriedade que não seja font ele  ira se basear na font do proprio elemento
     */
 }
 
@@ -25,4 +27,19 @@ Ja para pequanso padding ou marge ate box shadow vc pode usar tranquilo
     font-size: 1rem;
 
     /* basicamente mesma coisa da em  porem ela e relativa ao elemento root ou seja ao tamanho da font do html*/
+}
+
+.porc{
+    font-size: 100%;
+
+    /* E relativa ao tamanho da largura do elemento pai */
+    /* no caso font e a font mesmo */
+    /* % não funciona bem com heigth pois elemento precisa ter algum tamanho fixo  */
+
+    /* %  entre outros elemento que não seja a font e referente a largura do elemento pai  */
+}
+
+.vwh{
+        font-size: 1.6vh;   
+        /* Se basea no tamanho da tela */
 }
