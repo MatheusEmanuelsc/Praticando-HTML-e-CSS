@@ -1,0 +1,15 @@
+div{
+    width: 200px;
+    height: 100px;
+    background-color: yellow;
+
+
+    outline: 4px solid red;
+}
+
+
+
+/* Outline trabalharia com a borda de dentro e não vai alterar o tamanho do elemento */
+/* Outline trabalha basicamente com propriedades parecidas com border */
+
+/* A diferença entre border e outline e que o border altera o tamanho do elemento */
