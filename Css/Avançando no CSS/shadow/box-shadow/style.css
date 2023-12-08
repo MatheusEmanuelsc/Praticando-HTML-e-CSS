@@ -1,0 +1,28 @@
+
+div{
+    background-color: orange;
+    width: 200px;
+    height: 200px;
+    margin: 100px auto;
+
+
+    border-radius: 50px 20px 0px 80px / 100px 50px 0px 20px ;
+
+
+
+    box-shadow: 5px 0 6px black;
+
+    /* Box shadow serv para por uam somba no elemento 
+    
+    O primeiro valor serve para o deslocamento Horizontal
+    O segundo para o vertical
+    O Terceiro o numero de esfumaçamento
+    O quarto a cor
+
+
+    antes de passar o quarto elemento que seria a cor vc pode adc mais 1 valor que serve pra ampliar a sombra
+
+    Caso vc queria dc mais de uma sombra  basta , e adc os valores  porem lembre-se a sombra que veio antes dele sempre eestara em cima da que veio por ultimo
+    
+    */
+}

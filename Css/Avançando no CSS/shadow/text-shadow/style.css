@@ -1,0 +1,26 @@
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    text-align: center;
+    margin-top: 100px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 3rem;
+
+
+
+    text-shadow: 5px 5px 5px black ;
+
+    /* Basicamente a mesma coisa que o box shadow
+    
+    O primeiro valor e o deslocamento horizontal
+    O segundo  valor e o deslocamento vertical
+    O terceiro e o esfumaçamento
+    O quarto a cor
+
+    Diferente do box shadow esse vc não tem opção de aumentar a sombra
+
+
+    Ele continua aceitando varios valores do text shadow basta por virgula e adc valores
+    */
+}
