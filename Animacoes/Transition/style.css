@@ -1,0 +1,45 @@
+div{
+    background-color: orange;
+    width: 200px;
+    height: 150px;
+    margin: 100px auto;
+
+    transition-property: width ;
+    /* Propriedade trabalhada
+    Obs: não e uma boa ideia utilizar width para ser animado
+
+    para mais valores apenas por virgula e nome
+    vc tbm pode animar logo todas basta utilizar: all
+    */
+
+    transition-duration: 2s;
+    /* recebe valores em segundos e milisegundos 
+    Caso vc tenha animado duas propriedades vc animar em velocidades diferentes basta por virgular e a velocidade de animação da segunda propriedade ou respectivo numero de animação
+
+    caso vc tenha  posto apenas 2 valores para 3 propriedades ele vai considerar o priemiro pro ultimo
+    
+    */
+
+    transition-timing-function: linear;
+    /* recebe algumas propriedades que define a velocidade de cada parte da animação
+    
+    linear: mesma velocidade
+    ease-in: inicio lento
+    ease-out: no final lento
+    ease-in-out : acelera no começo desacelera no final
+
+    tbm recebe o cubic-bezier mais nesse caso e melhor vc olha em uma ferramenta online pesquise cubic-bezier ou veja aula no mod 8
+    */
+
+    transition-delay: 1s;
+    /* serve para atrasar a animação */
+}
+
+div:hover{
+    width: 400px;
+}
+
+/* Obs Animação so funcionar para valores numericos
+
+tbm exsite a forma abreviada que se chama apenas transition olhe no resumo.md
+*/
