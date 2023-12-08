@@ -1,0 +1,34 @@
+/* Importando a font no arquivo */
+
+@font-face {
+    /* nome da fonte */
+    font-family:nadia ;
+    
+    /* caminho do arquivo */
+    src: 
+    local("Nadia Serif"),
+    local("Nadia-Serif")
+    url(fonts/nadia/nadia-serif.ttf) format("truetype"),
+    url(fonts/nadia/nadia-serif.woff);
+    /* caso queira importar + de uma font so por a virgula e por url como no exemplo acima */
+
+    /* format e opcional serve para informar  ao browser o formato da font  */
+
+    /* local serve para caso ja tenha essa font no sistema ele ira localizar ela e utilizar  e opc tbm*/
+}
+
+h1{
+    font-family:nadia ;
+}
+
+/* link para consulta info 
+https://css-tricks.com/snippets/css/using-font-face-in-css/
+*/
+
+/* Site para baixar fonts
+https://www.fontsquirrel.com/
+*/
+
+/* Tbm Existe google fonts mais como ja sei não irei adc */
+
+/*Qual outra duvidar rever a aula mod 8  */
