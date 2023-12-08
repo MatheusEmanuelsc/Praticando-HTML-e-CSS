@@ -1,0 +1,82 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,500&family=Viaoda+Libre&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #555;
+    width: 70%;
+    max-width: 1200px;
+    
+    margin: 0 auto;
+}
+
+h1,h2,h3{
+    font-family: 'Viaoda Libre', serif;
+}
+
+.header__nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    background-color: #162028;
+    padding: 1rem;
+}
+
+.header__nav-title{
+    margin: 0;
+    color: white;
+    
+}
+
+
+.header__nav-itens{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+}
+
+/* Estilos links Header */
+
+.header__title-link,.header__nav-link{
+    text-decoration: none;
+    transition: 1s;
+    border-radius: 5px;
+}
+
+.header__title-link{
+    color: white;
+    text-transform: capitalize;
+}
+.header__nav-link {
+    color: #425564;
+    text-transform: uppercase;
+}
+
+.header__title-link:hover,.header__nav-link:hover{
+    text-decoration: underline;
+    font-size: 1.1rem;
+    background-color: white;
+    color: #162028;
+    padding: 10px;
+    
+}
+
+/* Header img */
+
+.header__banner{
+
+
+
+}
+
+.header__banner-img{
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+    margin: 0 auto;
+}
