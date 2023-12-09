@@ -44,7 +44,7 @@ h1,h2,h3{
 
 .header__title-link,.header__nav-link{
     text-decoration: none;
-    transition: 1s;
+    transition: 1.5s;
     border-radius: 5px;
 }
 
@@ -79,4 +79,57 @@ h1,h2,h3{
     max-width: 100%;
     object-fit: cover;
     margin: 0 auto;
+}
+
+
+/* main */
+
+.main{
+    margin-bottom: 0;
+}
+.main__about{
+    max-width: 1000px;
+    text-align: center;
+    margin: 4rem auto;
+}
+
+.main__about-container{
+    display: flex;
+    justify-content: center;
+    gap: 1.8rem;
+    margin-top: 3rem;
+}
+
+.main__info{
+    background: url(img/bg_detalhe.png) ;
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    padding: 5rem;
+    box-sizing: border-box;
+    
+    
+
+}
+
+.main__info-title{
+
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+.main__info-text{
+    letter-spacing: 1.5px;
+    text-align: left;
+    max-width: 37.5rem;
+}
+
+.footer{
+
+    background-color: #162028;
+    text-align: center;
+    margin: 0;
+    padding: 1rem;
 }
