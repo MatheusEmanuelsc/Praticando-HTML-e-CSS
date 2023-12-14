@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Form</h1>
+
+    <!-- iniciando um formulario -->
+    <form action="https://www.google.com.br/search">
+
+        <!-- criando uma entrada de dados -->
+        <label for="busca">faça uma bucas</label>
+        <!-- for e id faz o vinculo entre label e input -->
+
+        <input id="busca" type="text" name="q">
+        <!-- type informa o tipo de dado que entrada pode receber
+        
+        name sera tipo que servidor espera receber o do google no caso esperam o q
+
+        -->
+
+        <input type="submit" value="Ok">
+
+        <!-- tipo submit ou seja serve para submeter
+        value serve para por oque vc deseja exebir no botão no exemplo estar a palavra ok
+        -->
+    </form>
+
+    <!-- form tem 2 atributos action e method
+    
+    action: ele e pagina que estar no servidor que ira receber esses dados
+
+    method: recebe get ou post
+
+        get serve para enviar na propria url 
+            resumindo o metodo get serve para passar pouco dados para o servidor
+
+
+        post ele estar ligeriamente escondendo os dados de requisição
+            quando tem dados sensiveis  utilize o metodo post ou muito dados
+    -->
+</body>
+</html>
