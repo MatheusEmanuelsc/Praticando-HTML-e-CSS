@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        table{
+            width: 80%;
+            margin: auto;
+            background-color: rgb(131, 131, 58);
+
+            /* colapsando border */
+            border-collapse: collapse;
+        }
+        th{
+            background-color: beige;
+            border: 2px solid ;
+            padding: 16px;
+        }
+        td{
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- criando uma tabela --> 
+    <table>
+
+        <!-- Não e obrigatorio utilizar essa tag ela e como se fosse o titulo da tabela -->
+        <caption>Tabela de preços de cursos</caption>
+
+        <!-- aonde ficar os titulos -->
+        <thead>
+            <!-- criando uma linha -->
+            <tr>
+                <!-- criando colunas para o titulo -->
+                <th>Área</th>
+                <th>Curso</th>
+                <th>Investimento</th>
+            </tr>
+        </thead>
+
+        <!-- Conteudo aonde ficar os dados -->
+        <tbody>
+            <tr>
+                <!-- rowspan faz com que ela ocupe mais linhas -->
+                <td rowspan="3">Desing</td>
+                <td>InDesign</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+
+            <tr>
+                <!-- Dados -->
+                <td>Photoshop</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+
+            <tr>
+                
+                <td>Illustrator</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+
+
+            <tr>
+                <td rowspan="4">Development</td>
+                <td>HTML</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+
+            <tr>
+                
+                <td>CSS</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+
+            <tr>
+                
+                <td>JS</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+
+            <tr>
+                
+                <td>PHP</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+        </tbody>
+
+        <!-- Rodape -->
+        <tfoot>
+            <tr >
+                <!-- colspan para fazer que o dado ocupe mais colunas -->
+                <td colspan="3">Valores sujeitos a alterações</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
