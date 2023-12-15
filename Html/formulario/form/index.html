@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="">
+        <fieldset>
+            <legend>introdução</legend>
+
+            <input type="email" name="email" required>
+            <label for="quant" >quantidade</label>
+            <input min="0" max="20" id="quant" type="number">
+
+            <input type="date" min="2022-01-15" max="2022-01-27">
+
+
+
+            <input type="radio" name="disp" value="s" > sim
+            <input name="disp" type="radio" value="n"> não
+
+            <label >feedback<input type="text"></label>
+            
+        </fieldset>
+
+        <fieldset>
+            <Legend>Área de interesse</Legend>
+
+            <label >
+               js <input type="checkbox" name="lang" value="js" id="">
+            </label>
+            <label >
+                css <input type="checkbox" name="lang" value="css"  id="">
+             </label>
+             <label >
+                html <input type="checkbox" name="lang" value="html"  id="">
+             </label>
+
+
+             <select name="" id="">
+                <!-- multiple  atributo  para selecionar + de uma -->
+                <!-- size quantas linha vc que mostrar na barra de rolagem -->
+
+                <option >escolha uma</option>
+                
+                <optgroup label="front end">
+                    <option value="">html</option>
+                    <option value="">css</option>
+                    <option value="">js</option>
+                </optgroup>
+
+                <optgroup label="back-end">
+                    <option value="">sql</option>
+                    <option value="">c#</option>
+                </optgroup>
+                
+             </select>
+
+             <input type="text" list="lin">
+             <datalist id="lin">
+                    <option value="html">
+                    <option value="css">
+                    <option value="js">
+             </datalist>
+        </fieldset>
+
+        <fieldset>
+            <legend>mensagem</legend>
+
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </fieldset>
+        <input type="submit">
+    </form>
+</body>
+</html>
