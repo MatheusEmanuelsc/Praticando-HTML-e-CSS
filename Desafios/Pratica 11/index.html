@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <form class="form" action="" method="post">
+        <fieldset class="form__container">
+            <legend class="form__container-title">login</legend>
+
+            <label class="form__container-label" for="user">usuário</label>
+            <input class="form__container-input" type="text" name="user" id="user" required minlength="3">
+
+            <label class="form__container-label" for="password">Senha</label>
+            <input class="form__container-input" type="password" name="password" required minlength="8" id="password">
+
+            <div class="form__btns">
+                <div class="form__btns-container" >
+                    <input type="submit" class="btn main-btn" value="login">
+                    <a class="btn btn-register" href="cadastro.html">cadastra-se</a>
+                </div>
+
+                <a class="link" href="#">Esqueci minha senha</a>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>

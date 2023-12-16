@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+:root{
+    --primary-color:#3a68b7;
+    --form-backgroud:white;
+    --color-text:#5e5e5e;
+}
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    color: var(--color-text);
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--primary-color);
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    background-color: var(--form-backgroud);
+    padding: 1rem;
+    border-left:rgba(35,35,142.3 )solid 8px;
+}
+.form__container{
+    min-width: 350px;
+    max-width: 500px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.form__container-title{
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.form__container-label{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.form__container-input{
+    font-size: 1rem;
+    padding: .5rem;
+    outline: var(--primary-color) 1px solid;
+}
+
+.form__container-input:invalid:focus{
+    outline-color: red;
+}
+
+.form__container-input:valid:focus{
+    outline-color:green ;
+}
+
+.form__btns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form__btns-container{
+    display: flex;
+    
+    align-items: end;
+}
+
+.btn{
+    text-transform: uppercase;
+    color: var(--primary-color);
+    border-radius: 5px;
+    padding: .5rem 1rem;
+    border: none;
+    
+    
+}
+
+.main-btn{
+    background-color: var(--primary-color);
+    align-self: center;
+    color: white;
+   font-weight: bold;
+   cursor: pointer;
+}
+.btn-register{
+    text-decoration: none;
+    
+}
+.link{
+    text-decoration: none;
+    font-size: .7rem;
+    align-self: center;
+    
+    
+}
+.text-link{
+    font-size: .7rem;
+}
+.form__btns-link{
+    display: flex;
+    justify-content: center;
+    margin-left: 1rem;
+    gap: .5rem;
+    
+}
