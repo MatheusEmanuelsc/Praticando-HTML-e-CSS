@@ -1,0 +1,78 @@
+html{
+    background-color: #181818;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    
+}
+
+form{
+    width: 90%;
+    min-width: 28.125rem;
+    max-width: 35rem ;
+    background-color:#0e1010;
+    padding: 1rem;
+}
+fieldset{
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+label,input,textarea{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    
+}
+
+input,textarea{
+    background-color: rgba(0, 0,0,.7);
+    border: 2px solid transparent;
+    border-bottom-color: #bbb;
+    padding: .75rem;
+    margin: .5rem 0 2.5em;
+    color: white;
+    outline: 0;
+}
+
+/* estiliza quando está invalido */
+input:invalid:focus,textarea:invalid:focus{
+    border-bottom: 2px solid red;
+}
+/* estiliza quando está valido */
+input:valid:focus,textarea:valid:focus{
+    border-bottom: 2px solid green;
+}
+/* peseudo classe focus serve para estilzar quando vc estiver utilizando alguma parte do html  no exemplo estamos estilizando input e textarea */
+input:focus,textarea:focus{
+    background-color: white;
+    color: black;
+    
+}
+
+
+legend{
+    padding: .5em;
+    text-align: center;
+    font-weight: bold;
+    color: #8e999a;
+    font-size: 1.3rem;
+}
+
+.btn{
+    background-color: #2a2727;
+    color: white;
+    cursor: pointer;
+    padding: .7rem;
+    font-size: 1.2rem;
+    border: none;
+}
