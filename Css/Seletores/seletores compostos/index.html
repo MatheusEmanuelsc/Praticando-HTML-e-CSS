@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* seletor de descendencia */
+        ul li{
+            color: red;
+        }
+        /* seletor filho direto */
+        p > a{
+            color: blue;
+        }
+
+        p + a{
+            /* seletor de imrão adjacente */
+            color: green;
+        }
+
+        p ~ p{
+            /* seletor que selecionar todos os irmãos que venham imediatamente apos o p */
+            color: yellow;
+        }
+
+        p[title]{
+            /* seletor de atributo */
+            color: brown;
+
+            /* pode ser ainda mais espefico 
+            ex:  atributo="valor";
+            ai ele selecionaria apenas aquele tinha o valor
+            
+            */
+        }
+
+        /* a[title^⁼http]{}
+            /* seletor de atibruto que começar com algum valor */
+        
+
+        /* a[title$⁼http]{} 
+            seletor de atributo que temrina com
+        */
+
+    </style>
+</head>
+<body>
+    
+    <main>
+        <ul>
+            <li>ola</li>
+        </ul>
+
+        <p><a href=""></a></p>
+    </main>
+</body>
+</html>
