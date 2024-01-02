@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div :first-child{
+            /* selecionando primeiro filho */
+            color: red;
+
+
+            /* nesse exemplo estamos selecionando o primeiro filho dentro de uma div */
+        }
+
+        p:first-child{
+            color: blue;
+            /* nesse exemplo estamos todo p que e primeiro filho */
+        }
+
+        p:last-child{
+            color: green;
+            /* nesse exemplo estamos todo p que e ultimo filho */
+        }
+
+        p:nth-child(3){
+            color: orange;
+            /* selecionando um filho no qual vc deseja */
+
+            /* nesse exemplo selecionamos o terceiro filho */
+        }
+
+        p:nth-of-type(1){
+            /* serve para vc selecionar o primeiro filho de qualquer tipo */
+            background-color: aquamarine;
+            /* existe o fist e o las of type no exemplos utilizamos oque aborda todos */
+        }
+
+        /* utilizando algumas palavras chave neles */
+
+        li:nth-child(odd){
+            background-color: red;
+
+            /* odd para selecionar valores impares */
+
+            /* even para selecionar os numeros pares */
+            /* 2n para manter numero par tbm funciona */
+            /* basicamente ne um acumulador */
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <p>primeiro p</p>
+        <p>segundo p</p>
+        <p>terceiro p</p>
+    </div>
+
+    <ul>
+        <Li>item</Li>
+        <Li>item</Li>
+        <Li>item</Li>
+        <Li>item</Li>
+        <Li>item</Li>
+        <Li>item</Li>
+        <Li>item</Li>
+        <Li>item</Li>
+        <Li>item</Li>
+        <Li>item</Li>
+    </ul>
+</body>
+</html>
