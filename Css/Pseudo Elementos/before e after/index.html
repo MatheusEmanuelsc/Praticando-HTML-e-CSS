@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* vc consegue incluir um texto ou icone ate imagem */
+            /* obs não e visivel pelos motores de busca por tanto nunca utilize um conteudo importante nele */
+        p::before{
+            content: "Antes";
+            /* ponhe um conteudo antes */
+            
+        }
+
+        p::after{
+            content: "Depois";
+            /* ponhe um conteudo depois */
+        }
+
+        div{
+            position: relative;
+        }
+        div::after{
+            content: "";
+            width: 1rem;
+            height: 1rem;
+            background-color: red;
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        /* after e before funcionar como display inline */
+        /* pode trabalhar com position absolute para posicionar */
+
+        /* utilizando img */
+        div::before{
+            content: url(https://www.healthylifestylesliving.com/wp-content/uploads/2015/12/placeholder-256x256.gif);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nisi voluptatum eaque deleniti voluptates quam minus quae, iste, nulla illo fuga nemo ducimus qui vero voluptas sapiente quod earum debitis.</p>
+    </div>
+</body>
+</html>

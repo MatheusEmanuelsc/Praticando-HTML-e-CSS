@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p a{
+            color: red;
+            text-transform: uppercase;
+            background-color: yellow;
+        }
+        /* usa p que tenha um tag a */
+        p:has(a){
+            background-color: black;
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, quia veritatis tenetur officia recusandae eos impedit a minus culpa asperiores aliquam ad sequi illum sint tempore obcaecati quisquam veniam id?</p>
+    <p>Lorem <a href="">seilar</a> ipsum dolor sit amet consectetur adipisicing elit. Autem dolores dolorem molestiae ducimus rerum, distinctio maxime quam odio vero repellendus cum beatae, in sequi illum voluptas fugiat nihil debitis harum.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum voluptatum, rem deleniti possimus illum qui nam. Deserunt quis, eos illum quia molestias quam. Nam sint fuga sed temporibus. Magnam, dolores.</p>
+</body>
+</html>
