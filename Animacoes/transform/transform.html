@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        div{
+            outline: 1px solid #888;
+            width: 300px;
+            margin: .5rem auto;
+        }
+
+        p{
+            width: 50%;
+        }
+
+        .destaque{
+            background-color: yellow;
+        }
+
+        .div1 .destaque{
+            /* para utilizar mutiplos valores no transform */
+            transform: translateX(50px) rotate(30deg) skew(23deg) scale(2);
+            /* a ordem importa */
+
+            transform-origin: left top;
+            /* mudando o ponto de inicio da transformação  
+            vc tbm pode trabalahr com outros valores
+            */
+
+            
+
+            
+        }
+
+        
+    </style>
+</head>
+<body>
+    
+    <div class="div1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti cupiditate.</p>
+
+        <p class="destaque">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, vitae enim? Maiores at dolor, quas commodi ex sed hic iure!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aspernatur, dolorum ad tempore nam accusantium.</p>
+    </div>
+</body>
+</html>

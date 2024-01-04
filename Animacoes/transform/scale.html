@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        div{
+            outline: 1px solid #888;
+            width: 300px;
+            margin: .5rem auto;
+        }
+
+        p{
+            width: 50%;
+        }
+
+        .destaque{
+            background-color: yellow;
+        }
+
+        .div1 .destaque{
+            transform: scale()  ;
+
+            /* Propriedade Scale serve para ampliar ou diminuir o elemento  tanto no eixo X como eixo Y 
+            
+             se por exemplo vc por 2 sera o dobro do seu tamanho 
+             .5  vc reduzr o tamanho pela metade 
+
+            
+
+
+            scale() para mover apenas no eixo X
+            scaleY() para mover apenas no eixo Y
+            scale() para mover pelo eixo Z
+
+            ambos aceitam valores positivos e negativos
+
+            
+            */
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="div1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti cupiditate.</p>
+
+        <p class="destaque">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, vitae enim? Maiores at dolor, quas commodi ex sed hic iure!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aspernatur, dolorum ad tempore nam accusantium.</p>
+    </div>
+</body>
+</html>

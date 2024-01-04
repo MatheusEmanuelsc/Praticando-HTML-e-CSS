@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        div{
+            outline: 1px solid #888;
+            width: 300px;
+            margin: .5rem auto;
+        }
+
+        p{
+            width: 50%;
+        }
+
+        .destaque{
+            background-color: yellow;
+        }
+
+        .div1 .destaque{
+            transform: translateX(50px);
+
+            /* Propriedade translater serve para mover  tanto no eixo X como eixo Y 
+            
+            translateX() para mover apenas no eixo X
+            translateY() para mover apenas no eixo Y
+
+            ambos aceitam valores positivos e negativos
+
+            translate()
+            Esse movimenta os 2x
+            se vc por apenas 1 valor ele ira apenas por no eixo X
+            para trablhar com os 2x com valores diferentes batsa por "," primeiro e o eixo X depois Y
+            
+
+            */
+        }
+
+        /* uma diferença entre position relative e translate .
+        E que position relative e referente ao elemento pai ao tamanho  dele se vc usar %  
+        ja o translate e referente ao seu tamanho em % */
+    </style>
+</head>
+<body>
+    
+    <div class="div1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti cupiditate.</p>
+
+        <p class="destaque">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, vitae enim? Maiores at dolor, quas commodi ex sed hic iure!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aspernatur, dolorum ad tempore nam accusantium.</p>
+    </div>
+</body>
+</html>
