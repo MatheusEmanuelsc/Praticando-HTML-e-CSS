@@ -87,3 +87,35 @@ a{
 article{
     padding: 1rem 0;
 }
+
+section{
+    margin-bottom:2.8rem ;
+}
+
+.card{
+    max-width: 740px;
+    background-color: var(--secondary-color);
+    padding: 0;
+}
+
+.card__content{
+    padding: .2rem .6rem .6rem;
+}
+
+.card__content p, .card__title{
+    margin: 0;
+}
+
+.card__title{
+    font-size: 1.1rem;
+    text-transform: capitalize;
+}
+.card img{
+    max-width: 100%;
+    
+}
+.row{
+    display: flex;
+    gap: 2rem;
+    padding-top: 1rem;
+}
