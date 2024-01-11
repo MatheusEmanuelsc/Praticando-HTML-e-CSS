@@ -1,0 +1,89 @@
+:root{
+    --primary-color:#ff7833;
+    --secondary-color:#31333b;
+    --secondory-color-light:#444856;
+}
+
+h1{
+    font-size: 3.2rem;
+    color: #7b7b7b;
+    margin-top: 1.6rem;
+    margin-bottom:1.7rem ;
+}
+
+h2,h3,h4,h5,h6{
+    color: var(--primary-color);
+    margin: 0;
+}
+
+h2{
+    margin-top: 1rem;
+}
+body{
+    display: flex;
+    margin: 0;
+    color: #e7e7e7;
+    background-color:#ccc ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    line-height: 1.7;
+}
+
+
+.main-header{
+    background-color:var(--secondary-color) ;
+    flex: 0 0 16.25rem;
+}
+
+.main{
+    background-color: var(--secondory-color-light);
+    flex:1 0;
+    padding: 4.1rem 3.8rem 4.7rem ;
+}
+
+a{
+    color: inherit;
+}
+
+.perfil{
+    max-width: 6.25rem;
+}
+
+.main-nav{
+    text-align: right;
+    padding: 4.1rem 1.5rem 1.5rem;
+}
+
+.main-nav ul{
+    padding: 0;
+    list-style: none;
+    text-transform: capitalize;
+    
+}
+.main-nav li{
+    padding: .3rem 0;
+    border-bottom: 1px solid #7b7b7b;
+}
+.main-nav  ul a{
+    text-decoration: none;
+    display: block;
+    padding: .7rem 0;
+    transition: padding-right .5s,backgroud-color .5s;
+    background-color: transparent;
+
+}
+.main-nav ul a:hover{
+    background-color: var(--secondory-color-light);
+    padding-right: 1rem;
+}
+
+.hightligth{
+    border-left:  1px solid var(--primary-color);
+    font-size: 1.1rem;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+article{
+    padding: 1rem 0;
+}
