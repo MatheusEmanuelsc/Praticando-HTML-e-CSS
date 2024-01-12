@@ -118,4 +118,27 @@ section{
     display: flex;
     gap: 2rem;
     padding-top: 1rem;
+    justify-content: space-between;
+}
+.row > *{
+    flex: 1 0 0%;
+}
+
+.alternate{
+    list-style-type: none;
+    padding-left: 0px;
+    
+}
+
+.alternate li:not(:last-child){
+    border-bottom: 2px solid;
+    padding: 0;
+}
+
+.roman{
+    list-style-type: upper-roman;
+}
+
+.list-emoji{
+    list-style-type:"\1f642" ;
 }
