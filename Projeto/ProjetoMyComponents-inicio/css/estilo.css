@@ -2,6 +2,7 @@
     --primary-color:#ff7833;
     --secondary-color:#31333b;
     --secondory-color-light:#444856;
+    --secondory-color-dark:#23252d;
 }
 
 h1{
@@ -120,6 +121,9 @@ section{
     padding-top: 1rem;
     justify-content: space-between;
 }
+.row .row{
+    padding-top:0 ;
+}
 .row > *{
     flex: 1 0 0%;
 }
@@ -141,4 +145,43 @@ section{
 
 .list-emoji{
     list-style-type:"\1f642" ;
+}
+
+input, label, textarea, select{
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="radio"],input[type="checkbox"]{
+    width: auto;
+}
+
+
+input,textarea,select{
+    background-color: #ccc;
+    padding: .8rem;
+    border-radius: .2rem;
+    margin-bottom: 1rem;
+    border: 0;
+}
+
+.btn{
+    background-color: var(--secondary-color);
+    border: 2´x solid var(--secondory-color-dark);
+    color: white;
+    font-size: .8rem;
+    cursor: pointer;
+}
+
+.btn:hover, .btn:focus{
+    background-color: var(--secondory-color-dark);
+}
+
+.form-quiz{
+    width: 50%;
+}
+
+.btn-stroke{
+    background-color: transparent;
 }
