@@ -34,12 +34,17 @@ body{
 .main-header{
     background-color:var(--secondary-color) ;
     flex: 0 0 16.25rem;
+    
 }
 
 .main{
     background-color: var(--secondory-color-light);
     flex:1 0;
     padding: 4.1rem 3.8rem 4.7rem ;
+    background-image: url(/imagens/bg-unsplash.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 a{
@@ -53,6 +58,9 @@ a{
 .main-nav{
     text-align: right;
     padding: 4.1rem 1.5rem 1.5rem;
+    position: sticky;
+    top: 0;
+    bottom: 0;
 }
 
 .main-nav ul{
@@ -205,4 +213,35 @@ input,textarea,select{
 .btn-full + .btn-full{
     margin-left:0 ;
     margin-top: 1.2rem;
+}
+
+.table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table td:last-child, .table th:last-child{
+    text-align: right;
+}
+
+.table td .table th{
+    
+    padding: 1rem;
+}
+
+
+.table:not(.table-alternate) td{
+    border-bottom:2px solid var(--secondory-color-dark);
+}
+.table th{
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.table-alternate tbody tr:nth-child(odd){
+    background-color: var(--secondory-color-dark);
+}
+
+.table-verticalLines td:not(:last-child), .table-verticalLines th:not(:last-child){
+    border-right: 1px solid var(--secondory-color-dark);
 }
