@@ -1,3 +1,32 @@
+
+/* Lienar-gradiente */
 body {
     font-family: sans-serif;
+    background-image: linear-gradient(to top, rgb(0 0 255 / .9) 50%, red), url(imagens/tile.png);
+    background-attachment: fixed, scroll;
+    background-blend-mode: color;
+}
+
+
+.cores{
+    width: 80%;
+    border: 8px dashed black;
+    margin: 20px auto;
+    padding: 26px;
+}
+
+.cores p{
+    margin: 0;
+}
+section{
+    counter-reset: contador;
+}
+.cores{
+    counter-increment: contador;
+}
+.cores::before{
+    content:"[" counter(contador) "]";
+    display: inline-block;
+    margin-bottom: 16px;
+    font-weight: bold;
 }
