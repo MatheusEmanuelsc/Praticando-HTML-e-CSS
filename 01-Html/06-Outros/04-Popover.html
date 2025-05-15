@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial: Popover em HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 2rem;
+            background-color: #f4f4f4;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        code {
+            background: #eee;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.95em;
+        }
+
+        pre {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 1rem;
+            overflow-x: auto;
+            border-radius: 8px;
+        }
+
+        pre code {
+            background: none;
+            color: inherit;
+            padding: 0;
+        }
+
+        section {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        [popover] {
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            margin-top: 1rem;
+        }
+
+        .index ul {
+            padding-left: 1.5rem;
+        }
+
+        .index li {
+            margin-bottom: 0.4rem;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>📌 Tutorial: Popover em HTML</h1>
+
+    <section class="index">
+        <h2>📖 Índice</h2>
+        <ul>
+            <li><a href="#oque">O que é um Popover?</a></li>
+            <li><a href="#requisitos">Requisitos para usar Popover</a></li>
+            <li><a href="#funciona">Como funciona o atributo <code>popover</code></a></li>
+            <li><a href="#exemplo1">Exemplo básico</a></li>
+            <li><a href="#exemplo2">Exemplo com botão de ativação</a></li>
+            <li><a href="#css">Personalização via CSS</a></li>
+            <li><a href="#boaspraticas">Boas práticas</a></li>
+            <li><a href="#compatibilidade">Compatibilidade</a></li>
+            <li><a href="#referencias">Referências</a></li>
+        </ul>
+    </section>
+
+    <section id="oque">
+        <h2>📌 O que é um Popover?</h2>
+        <p>Popover é um elemento flutuante que aparece por cima da interface, normalmente usado para mostrar informações
+            adicionais ou ações rápidas. Com HTML moderno, é possível criar popovers sem JavaScript externo usando o
+            atributo <code>popover</code>.</p>
+    </section>
+
+    <section id="requisitos">
+        <h2>⚙️ Requisitos para usar Popover</h2>
+        <ul>
+            <li>Navegadores com suporte ao HTML 5.2+</li>
+            <li>Elemento com o atributo <code>popover</code></li>
+            <li>Botão ou JS para mostrar/ocultar</li>
+        </ul>
+    </section>
+
+    <section id="funciona">
+        <h2>🧠 Como funciona o atributo <code>popover</code></h2>
+        <pre><code>&lt;div popover id="meuPopover"&gt;Conteúdo&lt;/div&gt;
+&lt;button popovertarget="meuPopover"&gt;Abrir&lt;/button&gt;
+    </code></pre>
+        <p><strong>Tipos:</strong></p>
+        <ul>
+            <li><code>popover="auto"</code>: aparece automaticamente</li>
+            <li><code>popover="manual"</code>: requer controle via JS</li>
+        </ul>
+    </section>
+
+    <section id="exemplo1">
+        <h2>🧪 Exemplo básico</h2>
+        <button popovertarget="infoPopover">Mostrar Dica</button>
+        <div id="infoPopover" popover>
+            Essa é uma dica rápida!
+        </div>
+    </section>
+
+    <section id="exemplo2">
+        <h2>🎯 Exemplo com botão de ativação</h2>
+        <button popovertarget="detalhesPopover">Ver Detalhes</button>
+        <div id="detalhesPopover" popover="auto">
+            <p>Este é um popover com mais informações.</p>
+            <button onclick="document.getElementById('detalhesPopover').hidePopover()">Fechar</button>
+        </div>
+        <pre><code>document.getElementById('detalhesPopover').showPopover();
+document.getElementById('detalhesPopover').hidePopover();</code></pre>
+    </section>
+
+    <section id="css">
+        <h2>🎨 Personalização via CSS</h2>
+        <pre><code>[popover] {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}</code></pre>
+    </section>
+
+    <section id="boaspraticas">
+        <h2>✅ Boas práticas</h2>
+        <ul>
+            <li>Use <code>popover="auto"</code> para casos simples</li>
+            <li>Use <code>popover="manual"</code> se precisar de controle via JS</li>
+            <li>Sempre forneça botão para fechar o popover</li>
+            <li>Utilize <code>aria-labelledby</code> para acessibilidade</li>
+        </ul>
+    </section>
+
+    <section id="compatibilidade">
+        <h2>🌐 Compatibilidade com navegadores</h2>
+        <table border="1" cellpadding="6">
+            <thead>
+                <tr>
+                    <th>Navegador</th>
+                    <th>Suporte</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Chrome (114+)</td>
+                    <td>✅</td>
+                </tr>
+                <tr>
+                    <td>Edge (114+)</td>
+                    <td>✅</td>
+                </tr>
+                <tr>
+                    <td>Firefox</td>
+                    <td>❌</td>
+                </tr>
+                <tr>
+                    <td>Safari</td>
+                    <td>❌</td>
+                </tr>
+                <tr>
+                    <td>Mobile (em geral)</td>
+                    <td>❌</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>⚠️ Para suporte mais amplo, considere usar bibliotecas como Bootstrap.</p>
+    </section>
+
+    <section id="referencias">
+        <h2>📚 Referências</h2>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API" target="_blank">MDN Web Docs -
+                    Popover</a></li>
+            <li><a href="https://caniuse.com/mdn-api_html_element_popover" target="_blank">Can I use - Popover API</a>
+            </li>
+            <li><a href="https://html.spec.whatwg.org/multipage/popover.html" target="_blank">WHATWG HTML Spec</a></li>
+        </ul>
+    </section>
+
+</body>
+
+</html>
