@@ -1,67 +1,61 @@
-body{
+body {
+  margin: 0;
+  padding: 0;
+  background-color: aqua;
+  font-family: "Courier New", Courier, monospace;
 
-    margin: 0;
-    padding: 0;
-    background-color: aqua;
-    font-family: 'Courier New', Courier, monospace;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
 }
 
-
-.main-title{
-    color: #385555;
+.main-title {
+  color: #385555;
 }
 
-.list{
-
-    width: 90%;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
-    max-width: 960px; ;
+.list {
+  width: 90%;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  max-width: 960px;
 }
 
-.list-item{
-    flex-basis: 280px;
-    border-radius: 5px;
-    text-align: center;
-    box-shadow: 0  2px 8px rgba(0,0,0, .2);
-    background-color: white;
-    background-image: url(imagens/thumb02.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-
-
-
+.list-item {
+  flex-basis: 280px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  background-image: url(imagens/thumb02.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
-.list-item__img img{
-
-    border-radius: 50%;
-    width: 80px;
-    margin-top: 120px;
+.list-item__img img {
+  border-radius: 50%;
+  width: 80px;
+  margin-top: 120px;
 }
 
-.list-item__name{
-
-    margin: 0;
-    font-size: 24px;
-    color: #385555;
+.list-item__name {
+  margin: 0;
+  font-size: 24px;
+  color: #385555;
 }
 
-.list-item__action{
-    background-color: #e5e5e5;
-    display: flex;
-    flex-grow: 1;
-    padding: 16px;
-    justify-content: space-evenly;
-    
+.list-item__content {
+  flex-grow: 1;
+  padding: 0 20px;
+}
+.list-item__action {
+  background-color: #e5e5e5;
+  display: flex;
+  flex-grow: 1;
+  padding: 16px;
+  justify-content: space-evenly;
 }

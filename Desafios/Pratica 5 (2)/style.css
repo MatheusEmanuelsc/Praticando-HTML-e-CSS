@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.list-wrapper {
+  overflow-y: auto;
+  max-height: 500px;
+  background-color: white;
+}
+
+.list-wrapper > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+ul li {
+  display: flex;
+  border-bottom: 2px solid grey;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+li:hover {
+  background-color: darkgray;
+}
+
+li:hover .list-item__action {
+  visibility: visible;
+}
+.list-item__img img {
+  border-radius: 50%;
+}
+
+.list-item__action {
+  align-self: center;
+  opacity: 0.3;
+  visibility: hidden;
+}
