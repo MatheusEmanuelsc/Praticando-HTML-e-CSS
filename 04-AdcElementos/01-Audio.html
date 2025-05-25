@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo de Áudio no HTML</title>
+</head>
+
+<body>
+
+    <h1>🎵 Exemplo de Áudio no HTML</h1>
+
+    <!-- 
+        ============================
+        🔊 1. Reprodutor Básico
+        ============================
+        Utiliza o elemento <audio> com o atributo 'controls', 
+        que exibe uma interface nativa de reprodução (play, pause, volume, etc.)
+        Também é possível usar apenas o atributo 'src' diretamente no <audio>.
+      -->
+    <h2>1. Reprodutor Básico</h2>
+    <audio src="musica.mp3" controls>
+        <!-- Mensagem exibida caso o navegador não suporte o elemento de áudio -->
+        Seu navegador não suporta o elemento <code>audio</code>.
+    </audio>
+
+    <hr>
+
+    <!-- 
+        =======================================
+        🔁 2. Reprodutor com múltiplas fontes
+        =======================================
+        Usar <source> dentro do <audio> permite especificar 
+        múltiplos formatos de áudio (como .mp3 e .ogg), para garantir compatibilidade entre navegadores.
+        O navegador tentará usar a primeira fonte que ele conseguir reproduzir.
+      -->
+    <h2>2. Áudio com múltiplas fontes</h2>
+    <audio controls>
+        <!-- Primeiro formato: OGG -->
+        <source src="musica.ogg" type="audio/ogg">
+        <!-- Segundo formato: MP3 -->
+        <source src="musica.mp3" type="audio/mpeg">
+        <!-- Fallback se nenhum formato for suportado -->
+        Seu navegador não suporta o elemento <code>audio</code>.
+    </audio>
+
+    <hr>
+
+    <!-- 
+        =====================================================
+        🔄 3. Reprodução automática, em loop e silenciada
+        =====================================================
+        Atributos usados:
+        - autoplay: inicia automaticamente ao carregar a página.
+        - loop: reinicia o áudio automaticamente após terminar.
+        - muted: começa silencioso. Isso é necessário para que o autoplay funcione nos navegadores modernos.
+      -->
+    <h2>3. Autoplay + Loop + Muted</h2>
+    <audio src="efeito.wav" autoplay loop muted></audio>
+
+    <hr>
+
+    <!-- 
+        =====================================
+        🎛️ 4. Controle via JavaScript
+        =====================================
+        Aqui usamos botões personalizados para controlar a reprodução de um áudio.
+        Através do JavaScript, usamos:
+        - .play(): para iniciar a reprodução.
+        - .pause(): para pausar o áudio.
+        É necessário dar um ID ao elemento de áudio para referenciá-lo no código.
+      -->
+    <h2>4. Controle com JavaScript</h2>
+    <!-- Elemento de áudio com ID único -->
+    <audio id="meuAudio" src="som.mp3"></audio>
+    <br>
+    <!-- Botão que chama o método play() -->
+    <button onclick="document.getElementById('meuAudio').play()">▶️ Tocar</button>
+    <!-- Botão que chama o método pause() -->
+    <button onclick="document.getElementById('meuAudio').pause()">⏸️ Pausar</button>
+
+</body>
+
+</html>
+```
+
+
+
+<!-- ### ✅ Dicas Finais (em texto aqui, mas você pode pôr como comentário no topo do arquivo se quiser):
+
+    * O elemento `<audio>` é compatível com todos os navegadores modernos.
+        * Sempre ofereça mais de um formato de áudio com `
+        <source>` para garantir compatibilidade (MP3, OGG, WAV).
+        * `autoplay` só funciona com `muted` por padrão nos navegadores modernos por motivos de usabilidade e
+        privacidade.
+        * Você pode controlar o áudio via JavaScript com métodos como `.play()`, `.pause()`, `.volume`, `.currentTime`,
+        entre outros. -->

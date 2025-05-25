@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo de Vídeo no HTML</title>
+</head>
+
+<body>
+
+    <h1>🎬 Exemplo de Vídeo em HTML</h1>
+
+    <!-- 
+        ========================================
+        📽️ 1. Reprodutor básico de vídeo
+        ========================================
+        Usamos o elemento <video> com o atributo 'controls',
+        que fornece ao usuário os controles nativos (play, pause, volume, fullscreen, etc).
+        Também usamos 'width' para definir o tamanho do player.
+      -->
+    <h2>1. Reprodutor básico</h2>
+    <video src="video.mp4" width="600" controls>
+        <!-- Fallback para navegadores que não suportam <video> -->
+        Seu navegador não suporta a tag <code>video</code>.
+    </video>
+
+    <hr>
+
+    <!-- 
+        ================================================
+        🔄 2. Múltiplos formatos para compatibilidade
+        ================================================
+        Usar <source> dentro do <video> permite oferecer diferentes formatos (.mp4, .webm, .ogg).
+        O navegador escolhe o primeiro formato que consegue reproduzir.
+      -->
+    <h2>2. Vídeo com múltiplas fontes</h2>
+    <video width="600" controls>
+        <source src="video.webm" type="video/webm">
+        <source src="video.mp4" type="video/mp4">
+        <source src="video.ogg" type="video/ogg">
+        Seu navegador não suporta a tag <code>video</code>.
+    </video>
+
+    <hr>
+
+    <!-- 
+        =======================================================
+        🔇 3. Reprodução automática, loop e vídeo sem som
+        =======================================================
+        Atributos:
+        - autoplay: começa automaticamente
+        - loop: reinicia o vídeo automaticamente ao final
+        - muted: inicia sem som (necessário para autoplay funcionar)
+        - playsinline: permite autoplay em dispositivos móveis (como iPhones)
+      -->
+    <h2>3. Autoplay + Loop + Muted</h2>
+    <video src="teaser.mp4" width="600" autoplay loop muted playsinline></video>
+
+    <hr>
+
+    <!-- 
+        =====================================================
+        🎛️ 4. Controle do vídeo com JavaScript
+        =====================================================
+        Usamos botões personalizados que acessam métodos JS como:
+        - .play(): inicia o vídeo
+        - .pause(): pausa o vídeo
+        - .currentTime: controla o tempo de reprodução
+      -->
+    <h2>4. Controle com JavaScript</h2>
+    <!-- Dê um ID ao vídeo para poder manipulá-lo com JavaScript -->
+    <video id="meuVideo" src="filme.mp4" width="600"></video>
+    <br>
+    <button onclick="document.getElementById('meuVideo').play()">▶️ Tocar</button>
+    <button onclick="document.getElementById('meuVideo').pause()">⏸️ Pausar</button>
+    <button onclick="document.getElementById('meuVideo').currentTime = 0">⏮️ Reiniciar</button>
+
+</body>
+
+</html>
+
+<!--     
+    ### ✅ Dicas Importantes:
+    
+    * Os formatos mais suportados são `.mp4` (H.264), `.webm` e `.ogg`.
+    * Para garantir **máxima compatibilidade**, use `<source>` com todos os formatos disponíveis.
+    * O atributo `playsinline` é essencial para que vídeos com `autoplay` funcionem corretamente em **iPhones e iPads**.
+    * Com JavaScript você pode fazer ainda mais: alterar volume, mudar velocidade de reprodução, controlar eventos, etc.
+     -->
