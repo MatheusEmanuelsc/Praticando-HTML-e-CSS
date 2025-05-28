@@ -114,11 +114,3 @@ Ambas as ordens são válidas:
   <img src="exemplo.jpg" alt="Exemplo" />
 </figure>
 ```
-
----
-
-Se quiser, posso gerar um layout estilizado com CSS para exibir `<figure>` e `<figcaption` com formatação elegante. Deseja?
-
-```
-
-```
