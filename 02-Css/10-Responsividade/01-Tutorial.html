@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial: Responsividade HTML e CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: row;
+            min-height: 600px;
+        }
+
+        .sidebar {
+            background: #f8f9fa;
+            padding: 30px 20px;
+            border-right: 2px solid #e0e0e0;
+            min-width: 250px;
+            max-height: 70vh;
+            overflow-y: auto;
+            position: sticky;
+            top: 20px;
+        }
+
+        .sidebar h2 {
+            color: #667eea;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            margin: 12px 0;
+        }
+
+        .sidebar a {
+            color: #555;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding-left: 10px;
+            border-left: 3px solid transparent;
+            display: block;
+            padding: 8px 12px;
+        }
+
+        .sidebar a:hover {
+            color: #667eea;
+            border-left-color: #667eea;
+            background: #e8e8f5;
+        }
+
+        .main-content {
+            padding: 40px;
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .main-content h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin: 40px 0 20px 0;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .main-content h3 {
+            color: #764ba2;
+            font-size: 1.4em;
+            margin: 25px 0 15px 0;
+        }
+
+        .main-content p {
+            margin: 15px 0;
+            text-align: justify;
+        }
+
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            border-left: 4px solid #667eea;
+        }
+
+        .code-block code {
+            font-size: 0.9em;
+        }
+
+        .example-box {
+            background: #f0f7ff;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .tip {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .tip strong {
+            color: #2e7d32;
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                min-width: 100%;
+                max-height: none;
+                border-right: none;
+                border-bottom: 2px solid #e0e0e0;
+                position: static;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .main-content {
+                padding: 20px;
+            }
+
+            .main-content h2 {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            header {
+                padding: 20px 15px;
+            }
+
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            .main-content {
+                padding: 15px;
+            }
+        }
+
+        footer {
+            background: #2d2d2d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📱 Responsividade em HTML e CSS</h1>
+            <p>Tutorial Completo para Criar Sites Adaptativos</p>
+        </header>
+
+        <div class="content-wrapper">
+            <aside class="sidebar">
+                <h2>📑 Índice</h2>
+                <ul>
+                    <li><a href="#intro">Introdução</a></li>
+                    <li><a href="#viewport">Meta Viewport</a></li>
+                    <li><a href="#fluid">Design Fluido</a></li>
+                    <li><a href="#media">Media Queries</a></li>
+                    <li><a href="#mobile">Mobile First</a></li>
+                    <li><a href="#flexbox">Flexbox</a></li>
+                    <li><a href="#grid">CSS Grid</a></li>
+                    <li><a href="#imagens">Imagens Responsivas</a></li>
+                    <li><a href="#boas">Boas Práticas</a></li>
+                </ul>
+            </aside>
+
+            <main class="main-content">
+                <section id="intro">
+                    <h2>1. Introdução à Responsividade</h2>
+                    <p>Responsividade é a capacidade de um website se adaptar automaticamente a diferentes tamanhos de tela (smartphones, tablets, desktops). Hoje é essencial, pois mais de 60% do tráfego vem de dispositivos móveis.</p>
+                    <div class="example-box">
+                        <strong>Objetivo:</strong> Criar uma experiência de usuário consistente em qualquer dispositivo, mantendo legibilidade, navegação intuitiva e boa performance.
+                    </div>
+                </section>
+
+                <section id="viewport">
+                    <h2>2. Meta Viewport</h2>
+                    <p>A meta tag viewport é o primeiro passo para responsividade. Ela instrui o navegador como renderizar a página.</p>
+                    <div class="code-block"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></div>
+                    <h3>Componentes:</h3>
+                    <p><strong>width=device-width:</strong> Largura igual ao dispositivo</p>
+                    <p><strong>initial-scale=1.0:</strong> Zoom inicial de 100%</p>
+                    <div class="tip">
+                        <strong>💡 Dica:</strong> Sempre inclua a meta viewport no &lt;head&gt; da sua página.
+                    </div>
+                </section>
+
+                <section id="fluid">
+                    <h2>3. Design Fluido</h2>
+                    <p>Em vez de pixels fixos, use unidades relativas como percentuais (%), em, rem e vw (viewport width).</p>
+                    <div class="code-block"><code>.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.box {
+  width: 50%;
+  font-size: 1.5rem;
+}</code></div>
+                    <h3>Unidades Relativas:</h3>
+                    <p><strong>% (Percentual):</strong> Relativo ao elemento pai</p>
+                    <p><strong>em:</strong> Relativo ao font-size do elemento pai</p>
+                    <p><strong>rem:</strong> Relativo ao font-size da raiz (html)</p>
+                    <p><strong>vw/vh:</strong> Relativo ao viewport (1vw = 1% da largura da tela)</p>
+                </section>
+
+                <section id="media">
+                    <h2>4. Media Queries</h2>
+                    <p>Media queries permitem aplicar estilos CSS diferentes baseado em características do dispositivo, como largura da tela.</p>
+                    <div class="code-block"><code>/* Estilos padrão para desktop */
+body {
+  font-size: 16px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Celular */
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+}</code></div>
+                    <h3>Breakpoints Comuns:</h3>
+                    <p><strong>Celular (Mobile):</strong> até 480px</p>
+                    <p><strong>Tablet:</strong> 481px a 768px</p>
+                    <p><strong>Desktop pequeno:</strong> 769px a 1024px</p>
+                    <p><strong>Desktop:</strong> acima de 1025px</p>
+                </section>
+
+                <section id="mobile">
+                    <h2>5. Mobile First</h2>
+                    <p>Mobile First é uma estratégia onde você começa a estilizar para celulares e depois adiciona estilos para telas maiores.</p>
+                    <div class="code-block"><code>/* Base: Celular (mobile first) */
+.navbar {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 20px 50px;
+  }
+}</code></div>
+                    <div class="tip">
+                        <strong>✅ Vantagens:</strong> Melhor performance em celulares, código mais limpo e manutenção facilitada.
+                    </div>
+                </section>
+
+                <section id="flexbox">
+                    <h2>6. Flexbox</h2>
+                    <p>Flexbox é ideal para criar layouts responsivos e flexíveis com linhas e colunas.</p>
+                    <div class="code-block"><code>.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.item {
+  flex: 1;
+  min-width: 250px;
+}</code></div>
+                    <h3>Propriedades Principais:</h3>
+                    <p><strong>display: flex:</strong> Ativa o flexbox</p>
+                    <p><strong>flex-direction:</strong> row (padrão) ou column</p>
+                    <p><strong>justify-content:</strong> Alinha itens horizontalmente</p>
+                    <p><strong>align-items:</strong> Alinha itens verticalmente</p>
+                    <p><strong>flex-wrap:</strong> Permite quebra de linhas (wrap)</p>
+                </section>
+
+                <section id="grid">
+                    <h2>7. CSS Grid</h2>
+                    <p>CSS Grid é perfeito para layouts complexos com múltiplas linhas e colunas.</p>
+                    <div class="code-block"><code>.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}</code></div>
+                    <h3>Vantagens:</h3>
+                    <p><strong>auto-fit:</strong> Número de colunas se adapta ao espaço</p>
+                    <p><strong>minmax():</strong> Tamanho mínimo e máximo dos itens</p>
+                    <p><strong>gap:</strong> Espaçamento entre itens</p>
+                </section>
+
+                <section id="imagens">
+                    <h2>8. Imagens Responsivas</h2>
+                    <p>Imagens devem ser adaptáveis sem distorcer ou ficar fora de proporção.</p>
+                    
+                    <h3>8.1 Imagem Fluida Básica</h3>
+                    <div class="code-block"><code>/* Imagem fluida */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}</code></div>
+                    <p><strong>max-width: 100%:</strong> Garante que a imagem não ultrapasse a largura do container</p>
+                    <p><strong>height: auto:</strong> Mantém a proporção original da imagem</p>
+
+                    <h3>8.2 Picture Element para Múltiplas Resoluções</h3>
+                    <div class="code-block"><code>&lt;picture&gt;
+  &lt;source media="(max-width: 480px)" srcset="img-pequena.jpg"&gt;
+  &lt;source media="(max-width: 768px)" srcset="img-media.jpg"&gt;
+  &lt;img src="img-grande.jpg" alt="Descrição"&gt;
+&lt;/picture&gt;</code></div>
+                    <p>O elemento <strong>&lt;picture&gt;</strong> permite servir diferentes imagens conforme o tamanho da tela, otimizando performance.</p>
+
+                    <h3>8.3 Srcset para Diferentes Densidades de Pixel</h3>
+                    <div class="code-block"><code>&lt;img 
+  src="imagem-normal.jpg" 
+  srcset="imagem-2x.jpg 2x, imagem-3x.jpg 3x"
+  alt="Descrição"&gt;</code></div>
+                    <p>O <strong>srcset</strong> serve imagens de maior qualidade em telas de alta densidade (Retina displays).</p>
+
+                    <h3>8.4 Object-Fit: Controlando Como Imagens Preenchem o Espaço</h3>
+                    <p><strong>object-fit</strong> define como a imagem se comporta dentro de um container com dimensões específicas. É essencial para galerias responsivas!</p>
+                    
+                    <div class="code-block"><code>/* Diferentes valores de object-fit */
+.img-cover {
+  object-fit: cover;  /* Preenche, pode cortar */
+}
+
+.img-contain {
+  object-fit: contain;  /* Inteira dentro, pode ter espaço vazio */
+}
+
+.img-fill {
+  object-fit: fill;  /* Estica para preencher (pode distorcer) */
+}
+
+.img-scale-down {
+  object-fit: scale-down;  /* Menor entre original e contain */
+}
+
+/* Também funciona com videos */
+video {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}</code></div>
+
+                    <h3>Comparação dos Valores:</h3>
+                    <p><strong>cover:</strong> Imagem preenche todo o espaço, mantendo proporção. Partes podem ser cortadas. Ótimo para galerias!</p>
+                    <p><strong>contain:</strong> Imagem inteira fica visível dentro do container, mantendo proporção. Pode ter espaço vazio ao redor.</p>
+                    <p><strong>fill:</strong> Imagem estica para preencher 100% do espaço. Pode distorcer a imagem original.</p>
+                    <p><strong>scale-down:</strong> Usa o menor entre o tamanho original ou contain. Nunca aumenta a imagem.</p>
+
+                    <div class="tip">
+                        <strong>💡 Dica:</strong> Use <strong>cover</strong> para galerias uniformes, <strong>contain</strong> para mostrar imagem inteira sem corte.
+                    </div>
+
+                    <h3>8.5 Autofit em Galerias de Imagens</h3>
+                    <p>Combine CSS Grid com auto-fit para criar galerias de imagens completamente responsivas:</p>
+                    <div class="code-block"><code>.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.galeria img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}</code></div>
+                    <p><strong>auto-fit:</strong> Número de colunas se adapta dinamicamente ao espaço disponível</p>
+                    <p><strong>minmax(250px, 1fr):</strong> Cada imagem tem no mínimo 250px e cresce proporcionalmente</p>
+                    <p><strong>object-fit: cover:</strong> Imagem preenche o espaço mantendo proporção (corta se necessário)</p>
+
+                    <h3>8.6 Object-Position: Definindo o Ponto de Corte</h3>
+                    <p>Combine <strong>object-fit</strong> com <strong>object-position</strong> para controlar qual parte da imagem fica visível:</p>
+                    <div class="code-block"><code">/* Ajustando o ponto de corte */
+.img-top {
+  object-fit: cover;
+  object-position: top;  /* Corta da base */
+}
+
+.img-bottom {
+  object-fit: cover;
+  object-position: bottom;  /* Corta do topo */
+}
+
+.img-center {
+  object-fit: cover;
+  object-position: center;  /* Padrão - corta dos lados */
+}
+
+/* Também pode usar porcentagens */
+.img-custom {
+  object-fit: cover;
+  object-position: 30% 70%;  /* x y */
+}</code></div>
+                    <p><strong>object-position:</strong> Controla qual área da imagem permanece visível quando há corte com cover.</p>
+
+                    <h3>8.5 Exemplo HTML Completo com Autofit</h3>
+                    <div class="code-block"><code>&lt;div class="galeria"&gt;
+  &lt;img src="img1.jpg" alt="Imagem 1"&gt;
+  &lt;img src="img2.jpg" alt="Imagem 2"&gt;
+  &lt;img src="img3.jpg" alt="Imagem 3"&gt;
+  &lt;img src="img4.jpg" alt="Imagem 4"&gt;
+  &lt;img src="img5.jpg" alt="Imagem 5"&gt;
+  &lt;img src="img6.jpg" alt="Imagem 6"&gt;
+&lt;/div&gt;</code></div>
+                    <div class="tip">
+                        <strong>💡 Resultado:</strong> Em celular terá 1 coluna, tablet 2-3 colunas, desktop 4+ colunas, tudo automático!
+                    </div>
+
+                    <h3>8.6 Background Images Responsivas</h3>
+                    <div class="code-block"><code">.hero {
+  background-image: url('bg-mobile.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    background-image: url('bg-tablet.jpg');
+    height: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    background-image: url('bg-desktop.jpg');
+    height: 500px;
+  }
+}</code></div>
+                </section>
+
+                <section id="boas">
+                    <h2>9. Boas Práticas</h2>
+                    <p><strong>✓ Use Mobile First:</strong> Comece pelo celular e escale para cima</p>
+                    <p><strong>✓ Teste em Dispositivos Reais:</strong> Use DevTools do navegador (F12)</p>
+                    <p><strong>✓ Mantenha Hierarquia Visual:</strong> Textos e botões legíveis em qualquer tamanho</p>
+                    <p><strong>✓ Otimize Imagens:</strong> Comprima para reduzir tempo de carregamento</p>
+                    <p><strong>✓ Use Flexbox e Grid:</strong> Evite floats antigos para layouts responsivos</p>
+                    <p><strong>✓ Teste em Múltiplos Breakpoints:</strong> Não apenas desktop e mobile</p>
+                    <div class="tip">
+                        <strong>🎯 Resumo:</strong> Meta viewport + Media Queries + Unidades Relativas + Flexbox/Grid = Site Responsivo!
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Tutorial de Responsividade | Desenvolvido com 💜 para web designers e desenvolvedores</p>
+        </footer>
+    </div>
+</body>
+</html>

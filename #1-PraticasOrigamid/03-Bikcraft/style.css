@@ -201,4 +201,11 @@ footer p {
         text-align: center;
         justify-items: center;
     }
+    .hero-content::before {
+        display: none;
+    }
+
+    .advantages h2 {
+        text-align: center;
+    }
 }

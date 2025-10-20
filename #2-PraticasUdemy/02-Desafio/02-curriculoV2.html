@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Jao bom</title>
+    <!-- Observação: nesse código o objetivo era praticar semântica e não CSS, por isso usei 1 já feito -->
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        nav {
+            background: #f8f9fa;
+            padding: 20px 40px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        nav h2 {
+            display: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #764ba2;
+        }
+
+        main {
+            padding: 40px;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        section h2 {
+            font-size: 1.8em;
+            color: #667eea;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        section ul {
+            list-style: none;
+        }
+
+        section > ul > li {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            border-radius: 5px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        section > ul > li:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1);
+        }
+
+        section h3 {
+            font-size: 1.3em;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        section h3 strong {
+            color: #764ba2;
+        }
+
+        section h4 {
+            font-size: 1.05em;
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        section p {
+            color: #555;
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+
+        section article {
+            margin-bottom: 25px;
+            padding: 15px;
+            background: white;
+            border-radius: 5px;
+            border: 1px solid #e0e0e0;
+        }
+
+        section article h3 {
+            font-size: 1.15em;
+            margin-bottom: 10px;
+            color: #667eea;
+        }
+
+        section article ul {
+            padding-left: 20px;
+        }
+
+        section article li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        time {
+            color: #764ba2;
+            font-weight: 600;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+        }
+
+        footer h2 {
+            display: none;
+        }
+
+        footer ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.3s;
+        }
+
+        footer a:hover {
+            opacity: 0.8;
+        }
+
+        footer p {
+            opacity: 0.9;
+            font-size: 0.95em;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 30px 20px;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            section h2 {
+                font-size: 1.5em;
+            }
+
+            section > ul > li {
+                padding: 15px;
+            }
+        }
+    
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jao bom</h1>
+        <p>Brasileiro, solteiro, 30 anos.</p>
+    </header>
+
+    <nav>
+        <h2>Navegação</h2>
+        <ul>
+            <li><a href="#objetivo">Objetivo</a></li>
+            <li><a href="#experiencia">Experiência</a></li>
+            <li><a href="#formacao">Formação</a></li>
+            <li><a href="#cursos">Cursos</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="objetivo">
+            <h2>Objetivo</h2>
+            <p>WebDesigner/Progamador Front-End</p>
+        </section>
+
+        <section id="experiencia">
+            <h2>Experiência Profissional</h2>
+            <ul>
+                <li>
+                    <h3><strong>Uol</strong> - 2 meses</h3>
+                    <h4>Analista Programador</h4>
+                    <p>Desenvolvimento de aplicações web com HTML, CSS, AngularJS, Javascript, Ajax, Rest, JSON, PHP.</p>
+                </li>
+                <li>
+                    <h3><strong>Terra</strong> - 1 ano</h3>
+                    <h4>Desenvolvedor Front End Pleno</h4>
+                    <p>Atuei como Desenvolvedor Front-End Pleno, participando ativamente em todos os projetos da empresa (aplicação WEB, aplicativo Mobile e Portais).</p>
+                    <p>Trabalhei efetivamente usando tecnologias como HTML5, CSS, AngularJS, Wordpress, PHP, JSON e Javascript.</p>
+                </li>
+                <li>
+                    <h3><strong>R7</strong> - 6 meses</h3>
+                    <h4>Desenvolvedor Front End</h4>
+                    <p>Trabalhando com portais, landing pages e eCommerce, codando manualmente HTML, CSS, JavaScript, trabalhando diretamente com a equipe de Back-End com PHP.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="formacao">
+            <h2>Formação</h2>
+            <ul>
+                <li>
+                    <h3>Graduação em Tecnologia da Informação</h3>
+                    <p><strong>Instituição:</strong> Faculdade qualquer uma</p>
+                    <time datetime="2010-01">01/2010</time> a <time datetime="2012-12">12/2012</time>
+                </li>
+                <li>
+                    <h3>Pós-graduação em Projetos Computacionais em Tecnologias Front-End</h3>
+                    <p><strong>Instituição:</strong> Faculdade qualquer uma</p>
+                    <time datetime="2014-08">08/2014</time> a <time datetime="2015-12">12/2015</time>
+                </li>
+            </ul>
+        </section>
+
+        <section id="cursos">
+            <h2>Cursos e Especializações</h2>
+            <article>
+                <h3>Eventos</h3>
+                <ul>
+                    <li>Participação no evento Search Masters Brasil - São Paulo (2014).</li>
+                    <li>Certificação em Google Adwords - Google Partners Weekend (2015);</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Cursos Profissionais</h3>
+                <ul>
+                    <li>
+                        <h4>Html5</h4>
+                        <p>serfrontend - 40h - 2022</p>
+                    </li>
+                    <li>
+                        <h4>Javascript</h4>
+                        <p>serfrontend - 40h - 2022</p>
+                    </li>
+                    <li>
+                        <h4>CSS3</h4>
+                        <p>serfrontend - 40h - 2022</p>
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <h3>Idiomas</h3>
+                <ul>
+                    <li>Inglês: Básico</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <h2>Contato</h2>
+        <ul>
+            <li><a href="https://github.com">GitHub</a></li>
+            <li><a href="https://linkedin.com">LinkedIn</a></li>
+            <li><a href="https://youtube.com">YouTube</a></li>
+        </ul>
+        <p>&copy; 2024 Jao bom. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
