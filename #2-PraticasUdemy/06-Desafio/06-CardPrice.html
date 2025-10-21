@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Escolha o melhor plano de hospedagem para seu site">
+    <title>Planos de Hospedagem - MyServer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="menu">
+        <div class="logo">
+            <a href="/">myserver</a>
+        </div>
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li ><a href="/planos" class="active" aria-current="page">Planos</a></li>
+                <li><a href="/suporte">Suporte</a></li>
+                <li><a href="/contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section aria-labelledby="titulo-planos">
+            <h1 id="titulo-planos">Escolha seu plano</h1>
+            
+            <div class="cards">
+                <!-- Plano Essencial -->
+                <article class="plano-card">
+                    <header class="plano-header">
+                        <h2>Essencial</h2>
+                        <p class="preco">
+                            <span class="valor">R$ 3,95</span>
+                            <span class="periodo">/mês</span>
+                        </p>
+                    </header>
+                    
+                    <ul class="plano-features">
+                        <li>1 website</li>
+                        <li>1GB de armazenamento</li>
+                        <li>10GB de transferência</li>
+                    </ul>
+                    
+                    <footer class="plano-footer">
+                        <a href="#" class="btn-assinar" aria-label="Assinar plano Essencial">Assine já</a>
+                    </footer>
+                </article>
+
+                <!-- Plano Premium -->
+                <article class="plano-card plano-destaque">
+                    <header class="plano-header">
+                        <h2>Premium</h2>
+                        <p class="preco">
+                            <span class="valor">R$ 7,95</span>
+                            <span class="periodo">/mês</span>
+                        </p>
+                    </header>
+                    
+                    <ul class="plano-features">
+                        <li>5 websites</li>
+                        <li>3GB de armazenamento</li>
+                        <li>Transferência ilimitada</li>
+                        <li>10 horas de suporte mensais</li>
+                    </ul>
+                    
+                    <footer class="plano-footer">
+                        <a href="#" class="btn-assinar" aria-label="Assinar plano Premium">Assine já</a>
+                    </footer>
+                </article>
+
+                <!-- Plano Gold -->
+                <article class="plano-card">
+                    <header class="plano-header">
+                        <h2>Gold</h2>
+                        <p class="preco">
+                            <span class="valor">R$ 15,95</span>
+                            <span class="periodo">/mês</span>
+                        </p>
+                    </header>
+                    
+                    <ul class="plano-features">
+                        <li>15 websites</li>
+                        <li>30GB de armazenamento</li>
+                        <li>Transferência ilimitada</li>
+                        <li>30 horas de suporte mensais</li>
+                        <li>Email personalizado</li>
+                    </ul>
+                    
+                    <footer class="plano-footer">
+                        <a href="#" class="btn-assinar" aria-label="Assinar plano Gold">Assine já</a>
+                    </footer>
+                </article>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 MyServer. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
