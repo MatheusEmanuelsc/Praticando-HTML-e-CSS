@@ -62,10 +62,10 @@ h1 {
     padding: 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem; /* Espaçamento entre cards */
+    gap: 2rem; 
 }
 
-/* ========== CARDS COM MESMO TAMANHO ========== */
+
 article {
     background-color: black;
     border-radius: 8px;
@@ -73,7 +73,7 @@ article {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
-    height: 100%; /* Faz todos terem mesma altura */
+    height: 100%; 
 }
 
 h2 {
@@ -97,38 +97,38 @@ h2 {
     font-size: 0.9rem;
 }
 
-/* ========== LISTA COM BOLINHAS VERDES ========== */
+
 .plano-features {
     list-style: none;
-    flex: 1; /* Empurra o botão para baixo */
+    flex: 1; 
     margin-bottom: 1.5rem;
 }
 
 .plano-features li {
     display: flex;
-    align-items: center; /* Alinha bolinha com texto */
+    align-items: center; 
     gap: 0.8rem;
     padding: 0.5rem 0;
     line-height: 1.5;
 }
 
 .plano-features li::before {
-    content: '●'; /* Bolinha */
-    color: rgb(196, 226, 0); /* Verde */
+    content: '●'; 
+    color: rgb(196, 226, 0); 
     font-size: 1.2rem;
-    flex-shrink: 0; /* Não encolhe */
+    flex-shrink: 0; 
 }
 
-/* ========== BOTÃO NA PARTE DE BAIXO ========== */
+
 .plano-footer {
-    margin-top: auto; /* Empurra para o final */
+    margin-top: auto; 
 }
 
 .btn-assinar {
     display: block;
     width: 100%;
     text-align: center;
-    background-color: rgb(196, 226, 0); /* Fundo verde */
+    background-color: rgb(196, 226, 0); 
     color: black;
     text-decoration: none;
     padding: 1rem;
@@ -139,12 +139,12 @@ h2 {
 }
 
 .btn-assinar:hover {
-    transform: translateY(-3px); /* Efeito de levantar */
+    transform: translateY(-3px); 
     background-color: rgb(176, 206, 0);
     box-shadow: 0 5px 15px rgba(196, 226, 0, 0.3);
 }
 
-/* Footer */
+
 footer {
     text-align: center;
     padding: 2rem;
