@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+        --primary-color: #FED001;
+        --secondary-color: #2a2a2a;
+        --third-color: #ffffff;
+        --fourth-color:#003464 ;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Dosis", "Roboto", sans-serif;
+    line-height: 1.6;
+    
+    
+    
+}
+
+header{
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    
+}
+
+header ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 1rem;
+    
+    
+    
+    
+}
+
+header ul a{
+    color: var(--primary-color);
+    border: var(--primary-color) 2px solid;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.hero-content{
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    align-items: center;
+    background: linear-gradient(var(--third-color), var(--primary-color));
+    padding: 0 4rem;
+}
+.hero-text h1{
+    font-size: 3rem;
+    
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-text-frase{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: .5rem 1.5rem;
+}
+
+.courses{
+    display: grid;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem;
+    justify-items: center;
+    
+    
+}
+.courses h2{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.courses-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    
+    
+    
+}
+
+.courses-cards article{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.courses-cards img{
+    display: block;
+    width: 100%;
+    
+    
+    
+}
+.courses-cards--text{
+    text-align: center;
+    padding: 1rem 2rem;
+    border: var(--secondary-color) 1px solid;
+    border-top: none;
+}
+
+.courses-cards--text h3{
+    font-size: 1.5rem;
+    margin-bottom: .7rem;
+}
+
+.about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 5rem;
+    align-items: center;
+    gap: 2rem;
+    background-color:var(--fourth-color) ;
+}
+
+.about img{
+    display: block;
+    max-width: 100%;
+    
+}
+
+.about-text{
+    color: var(--third-color);
+    text-align: center;
+
+}
+
+.about-text h2{
+    font-size: 3rem;
+    margin: 1rem;
+}
+
+.contact{
+    display: grid;
+    max-width: 1200px;
+    gap: 2rem;
+    margin: 2rem auto;
+}
+
+.contact h2{
+    text-align: center;
+    font-size: 3rem; ;
+}
+
+address{
+    text-align: right;
+}
+
+footer{
+    background-color: var(--secondary-color);
+}
+
+footer p{
+    color:  var(--third-color);
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 2rem;
+}
