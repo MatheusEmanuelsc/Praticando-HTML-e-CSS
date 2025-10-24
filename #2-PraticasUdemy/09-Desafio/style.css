@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
-        --primary-color: #FED001;
-        --secondary-color: #2a2a2a;
-        --third-color: #ffffff;
-        --fourth-color:#003464 ;
+    --primary-color: #FED001;
+    --secondary-color: #2a2a2a;
+    --third-color: #ffffff;
+    --fourth-color:#003464;
 }
+
 *{
     margin: 0;
     padding: 0;
@@ -15,9 +16,7 @@
 body{
     font-family: "Dosis", "Roboto", sans-serif;
     line-height: 1.6;
-    
-    
-    
+    padding-top: 80px; /* Compensa o header fixed */
 }
 
 header{
@@ -27,8 +26,10 @@ header{
     padding: 0.5rem 1rem;
     align-items: center;
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    
+    z-index: 1000;
 }
 
 header ul{
@@ -36,10 +37,6 @@ header ul{
     list-style: none;
     align-items: center;
     gap: 1rem;
-    
-    
-    
-    
 }
 
 header ul a{
@@ -49,17 +46,24 @@ header ul a{
     font-size: 1rem;
     text-decoration: none;
     text-transform: capitalize;
+    transition: all 0.3s ease;
 }
+
+header ul a:hover{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
 .hero-content{
     display: grid;
-    grid-template-columns:  1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     background: linear-gradient(var(--third-color), var(--primary-color));
     padding: 0 4rem;
 }
+
 .hero-text h1{
     font-size: 3rem;
-    
     margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
@@ -70,12 +74,21 @@ header ul a{
     font-weight: bold;
 }
 
+.hero-image img{
+    display: block;
+    max-width: 100%;
+}
+
 a{
     text-decoration: none;
     background-color: var(--secondary-color);
     color: var(--primary-color);
     padding: .5rem 1.5rem;
+    display: inline-block;
+    transition: all 0.3s ease;
 }
+
+
 
 .courses{
     display: grid;
@@ -83,9 +96,8 @@ a{
     gap: 2rem;
     margin: 2rem;
     justify-items: center;
-    
-    
 }
+
 .courses h2{
     text-align: center;
     font-size: 3rem;
@@ -96,25 +108,24 @@ a{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
-    
-    
-    
 }
 
 .courses-cards article{
-    
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    transition: transform 0.3s ease;
 }
+
+.courses-cards article:hover{
+    transform: translateY(-10px);
+}
+
 .courses-cards img{
     display: block;
     width: 100%;
-    
-    
-    
 }
+
 .courses-cards--text{
     text-align: center;
     padding: 1rem 2rem;
@@ -130,22 +141,20 @@ a{
 .about{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-top: 5rem;
+    padding: 5rem 2rem;
     align-items: center;
     gap: 2rem;
-    background-color:var(--fourth-color) ;
+    background-color: var(--fourth-color);
 }
 
 .about img{
     display: block;
     max-width: 100%;
-    
 }
 
 .about-text{
     color: var(--third-color);
     text-align: center;
-
 }
 
 .about-text h2{
@@ -158,15 +167,17 @@ a{
     max-width: 1200px;
     gap: 2rem;
     margin: 2rem auto;
+    padding: 0 1rem;
 }
 
 .contact h2{
     text-align: center;
-    font-size: 3rem; ;
+    font-size: 3rem;
 }
 
 address{
-    text-align: right;
+    text-align: center;
+    font-style: normal;
 }
 
 footer{
@@ -174,8 +185,111 @@ footer{
 }
 
 footer p{
-    color:  var(--third-color);
+    color: var(--third-color);
     font-size: 1.2rem;
     text-align: center;
     padding: 2rem;
+}
+
+/* ==================== RESPONSIVIDADE ==================== */
+
+/* Tablets e telas médias */
+@media(max-width: 1024px){
+    .hero-content{
+        padding: 0 2rem;
+    }
+    
+    .courses-cards{
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+    
+    .about{
+        padding: 3rem 2rem;
+    }
+}
+
+/* Tablets pequenos */
+@media(max-width: 800px){
+    .hero-content{
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+    
+    .hero-text h1{
+        font-size: 2.5rem;
+    }
+    
+    .courses-cards{
+        grid-template-columns: 1fr;
+    }
+    
+    .about{
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+    }
+    
+    .about figure{
+        order: -1;
+    }
+}
+
+/* Mobile */
+@media(max-width: 600px){
+    body{
+        padding-top: 180px; /* Header mobile é mais alto */
+    }
+    
+    header{
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    header ul{
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+    }
+    
+    header ul a{
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .hero-text h1{
+        font-size: 2rem;
+    }
+    
+    .courses h2,
+    .about-text h2,
+    .contact h2{
+        font-size: 2rem;
+    }
+    
+    .courses-cards--text{
+        padding: 0.5rem 1rem;
+    }
+    
+    .contact{
+        margin: 1rem;
+    }
+}
+
+/* Mobile pequeno */
+@media(max-width: 400px){
+    .hero-text h1{
+        font-size: 1.5rem;
+    }
+    
+    .hero-content{
+        padding: 1rem 0.5rem;
+    }
+    
+    .courses,
+    .contact{
+        margin: 1rem 0.5rem;
+    }
 }
