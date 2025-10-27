@@ -16,7 +16,7 @@
 body{
     font-family: "Dosis", "Roboto", sans-serif;
     line-height: 1.6;
-    padding-top: 80px; /* Compensa o header fixed */
+    padding-top: 6.25rem; /* Compensa o header fixed */
 }
 
 header{
